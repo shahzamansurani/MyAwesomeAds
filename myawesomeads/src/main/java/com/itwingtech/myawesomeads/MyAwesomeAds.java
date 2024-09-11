@@ -8,11 +8,11 @@ import android.os.CountDownTimer;
 public class MyAwesomeAds {
     public static String appName = "PrefName";
 
-    public static void initializeApp(Application application) {
+    public static void initApp(Application application) {
         Admob_Ads.InitApp(application);
     }
 
-    public static void initialize(Activity activity) {
+    public static void init(Activity activity) {
         appName = activity.getPackageName();
         OpenAppAd.LoadOpenApp(activity);
     }

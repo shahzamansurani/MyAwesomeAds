@@ -19,10 +19,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        MyAwesomeAds.init(this);
 
-        MyAwesomeAds.initialize(this);
-        MyAwesomeAds.loadSplash(this, 3000, () -> {
-            Toast.makeText(this, "Splash Working", Toast.LENGTH_SHORT).show();
-        });
     }
 }
