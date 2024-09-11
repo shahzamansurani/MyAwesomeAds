@@ -69,17 +69,8 @@ public class Admob_Ads {
     private static RewardedAd rewardedAd;
 
 
-    public static void InitApp(Application application) {
-        FirebaseApp.initializeApp(application);
-//        FirebaseCrashlytics.getInstance();
-//        FirebaseAnalytics.getInstance(application);
-        new Thread(() -> MobileAds.initialize(application, initializationStatus -> {
-        })).start();
-        OneSignal.initWithContext(application, SharedPref.getOneSingleKey(application));
-        OneSignal.getNotifications().requestPermission(true, Continue.with(r -> {
-        }));
-        MyAwesomeAds.loadOpenApp(application);
-        Toast.makeText(application, "Everything is Okay...", Toast.LENGTH_SHORT).show();
+    public void InitApp(Application application) {
+
     }
 
 
