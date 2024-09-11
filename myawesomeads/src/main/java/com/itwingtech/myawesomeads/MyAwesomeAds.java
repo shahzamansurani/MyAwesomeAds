@@ -4,12 +4,27 @@ import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 import android.os.CountDownTimer;
+import android.widget.Toast;
+
+import com.google.android.gms.ads.MobileAds;
+import com.google.firebase.FirebaseApp;
+import com.onesignal.Continue;
+import com.onesignal.OneSignal;
 
 public class MyAwesomeAds {
     public static String appName = "PrefName";
 
-    public static void initApp(Application application) {
-        Admob_Ads.InitApp(application);
+    public void initApp(Application application) {
+        FirebaseApp.initializeApp(application);
+//        FirebaseCrashlytics.getInstance();
+//        FirebaseAnalytics.getInstance(application);
+        new Thread(() -> MobileAds.initialize(application, initializationStatus -> {
+        })).start();
+        OneSignal.initWithContext(application, SharedPref.getOneSingleKey(application));
+        OneSignal.getNotifications().requestPermission(true, Continue.with(r -> {
+        }));
+        loadOpenApp(application);
+        Toast.makeText(application, "Everything is Okay...", Toast.LENGTH_SHORT).show();
     }
 
     public static void init(Activity activity) {
