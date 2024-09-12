@@ -69,14 +69,14 @@ public class Admob_Ads {
     private static RewardedAd rewardedAd;
 
 
-    public void InitApp(Application application) {
-
-    }
-
-
-    public static void InitAdmob(Activity activity) {
-
-    }
+//    public void InitApp(Application application) {
+//
+//    }
+//
+//
+//    public static void InitAdmob(Activity activity) {
+//
+//    }
 
     public static boolean isNetworkAvailable(Activity context) {
         ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
