@@ -1,0 +1,60 @@
+com.itwingtech.myapplication.app-ssp-android-1.1.1-0 C:\Users\Anonymous\.gradle\caches\transforms-4\03f85ba00d4d66ac9ba87944579e2449\transformed\ssp-android-1.1.1\res
+com.itwingtech.myapplication.app-lifecycle-viewmodel-release-1 C:\Users\Anonymous\.gradle\caches\transforms-4\09c81b98256f8c8b8e6c09658309b9dc\transformed\lifecycle-viewmodel-release\res
+com.itwingtech.myapplication.app-ads-adservices-java-1.0.0-beta05-2 C:\Users\Anonymous\.gradle\caches\transforms-4\0d2d06f2d3842d80e9718d72eea2d0c6\transformed\ads-adservices-java-1.0.0-beta05\res
+com.itwingtech.myapplication.app-media-1.0.0-3 C:\Users\Anonymous\.gradle\caches\transforms-4\0deeb6d487f6d923d18202f333c755f2\transformed\media-1.0.0\res
+com.itwingtech.myapplication.app-material-1.12.0-4 C:\Users\Anonymous\.gradle\caches\transforms-4\0e28803a920ee3d76f7d72583b7b6f87\transformed\material-1.12.0\res
+com.itwingtech.myapplication.app-activity-1.9.2-5 C:\Users\Anonymous\.gradle\caches\transforms-4\11ef3124ba5841473ee0c1de487e2ad3\transformed\activity-1.9.2\res
+com.itwingtech.myapplication.app-recyclerview-1.1.0-6 C:\Users\Anonymous\.gradle\caches\transforms-4\194b246827a8f5f692be929b95cedd79\transformed\recyclerview-1.1.0\res
+com.itwingtech.myapplication.app-sqlite-2.3.0-7 C:\Users\Anonymous\.gradle\caches\transforms-4\1bfeae39a294808e5400315c59962cd9\transformed\sqlite-2.3.0\res
+com.itwingtech.myapplication.app-firebase-common-21.0.0-8 C:\Users\Anonymous\.gradle\caches\transforms-4\1d6598f9bafcdd8b881bbc856354dc32\transformed\firebase-common-21.0.0\res
+com.itwingtech.myapplication.app-cardview-1.0.0-9 C:\Users\Anonymous\.gradle\caches\transforms-4\277b96112191a1d412b49d16512dfeeb\transformed\cardview-1.0.0\res
+com.itwingtech.myapplication.app-play-services-ads-lite-23.3.0-10 C:\Users\Anonymous\.gradle\caches\transforms-4\2a0afb0a7673fab409a287f5c9836864\transformed\play-services-ads-lite-23.3.0\res
+com.itwingtech.myapplication.app-fragment-1.5.4-11 C:\Users\Anonymous\.gradle\caches\transforms-4\32dda15712bbb773d6d46ff2634bd84c\transformed\fragment-1.5.4\res
+com.itwingtech.myapplication.app-core-1.13.0-12 C:\Users\Anonymous\.gradle\caches\transforms-4\35aa969f32641b006ec066e588616b6f\transformed\core-1.13.0\res
+com.itwingtech.myapplication.app-lifecycle-livedata-2.8.5-13 C:\Users\Anonymous\.gradle\caches\transforms-4\3b77608fd18107f9c3557fd6b0af3d57\transformed\lifecycle-livedata-2.8.5\res
+com.itwingtech.myapplication.app-lifecycle-runtime-release-14 C:\Users\Anonymous\.gradle\caches\transforms-4\4391845b89440c50e90b0fdb5d29a68d\transformed\lifecycle-runtime-release\res
+com.itwingtech.myapplication.app-lottie-6.4.1-15 C:\Users\Anonymous\.gradle\caches\transforms-4\50c23152749826f18a39c92f762bcc8b\transformed\lottie-6.4.1\res
+com.itwingtech.myapplication.app-lifecycle-viewmodel-savedstate-2.8.5-16 C:\Users\Anonymous\.gradle\caches\transforms-4\55ec58a9e35c6d13f90d520ff2ccc687\transformed\lifecycle-viewmodel-savedstate-2.8.5\res
+com.itwingtech.myapplication.app-play-services-basement-18.4.0-17 C:\Users\Anonymous\.gradle\caches\transforms-4\58aa371617de592bd7b8e5755d64a468\transformed\play-services-basement-18.4.0\res
+com.itwingtech.myapplication.app-lifecycle-livedata-core-2.8.5-18 C:\Users\Anonymous\.gradle\caches\transforms-4\5b3d0255a371f170fcc4064db16b122a\transformed\lifecycle-livedata-core-2.8.5\res
+com.itwingtech.myapplication.app-profileinstaller-1.3.1-19 C:\Users\Anonymous\.gradle\caches\transforms-4\639d4026a8b345a98bf226219d3ef927\transformed\profileinstaller-1.3.1\res
+com.itwingtech.myapplication.app-lifecycle-livedata-core-ktx-2.8.5-20 C:\Users\Anonymous\.gradle\caches\transforms-4\65c380709f967f9163ce50eca41e5a14\transformed\lifecycle-livedata-core-ktx-2.8.5\res
+com.itwingtech.myapplication.app-constraintlayout-2.1.4-21 C:\Users\Anonymous\.gradle\caches\transforms-4\6a74713f1ae24f38e8257a1f5e79102e\transformed\constraintlayout-2.1.4\res
+com.itwingtech.myapplication.app-savedstate-1.2.1-22 C:\Users\Anonymous\.gradle\caches\transforms-4\6c76ae4f61551150ac300641e7b1363c\transformed\savedstate-1.2.1\res
+com.itwingtech.myapplication.app-core-runtime-2.2.0-23 C:\Users\Anonymous\.gradle\caches\transforms-4\6e2c2402c6813ddce9d3d57b674849d4\transformed\core-runtime-2.2.0\res
+com.itwingtech.myapplication.app-emoji2-1.3.0-24 C:\Users\Anonymous\.gradle\caches\transforms-4\73170d523d622d7a0db183dc1448d32b\transformed\emoji2-1.3.0\res
+com.itwingtech.myapplication.app-transition-1.5.0-25 C:\Users\Anonymous\.gradle\caches\transforms-4\8bd81d5d3e2e532119bd2955236fa220\transformed\transition-1.5.0\res
+com.itwingtech.myapplication.app-lifecycle-process-2.8.5-26 C:\Users\Anonymous\.gradle\caches\transforms-4\8f99a321b6b11b90eac48f63b61e30e6\transformed\lifecycle-process-2.8.5\res
+com.itwingtech.myapplication.app-work-runtime-ktx-2.8.1-27 C:\Users\Anonymous\.gradle\caches\transforms-4\906771f74d19cc6bce8761cb33dc54d9\transformed\work-runtime-ktx-2.8.1\res
+com.itwingtech.myapplication.app-firebase-messaging-23.4.0-28 C:\Users\Anonymous\.gradle\caches\transforms-4\90fcc9fc6d78d91fe30e7d34e342eb81\transformed\firebase-messaging-23.4.0\res
+com.itwingtech.myapplication.app-work-runtime-2.8.1-29 C:\Users\Anonymous\.gradle\caches\transforms-4\91fbfa9774617526d0117604e8feaf63\transformed\work-runtime-2.8.1\res
+com.itwingtech.myapplication.app-lifecycle-service-2.8.5-30 C:\Users\Anonymous\.gradle\caches\transforms-4\930afede34b085a568fb0b910ff77afe\transformed\lifecycle-service-2.8.5\res
+com.itwingtech.myapplication.app-core-5.1.17-31 C:\Users\Anonymous\.gradle\caches\transforms-4\9f1c3c0f1c7059da22c83521e0935305\transformed\core-5.1.17\res
+com.itwingtech.myapplication.app-coordinatorlayout-1.1.0-32 C:\Users\Anonymous\.gradle\caches\transforms-4\a047e16af5b4ae58273c3933679f89bb\transformed\coordinatorlayout-1.1.0\res
+com.itwingtech.myapplication.app-ads-adservices-1.0.0-beta05-33 C:\Users\Anonymous\.gradle\caches\transforms-4\b67d98c127c22f7d881e496634c7547a\transformed\ads-adservices-1.0.0-beta05\res
+com.itwingtech.myapplication.app-notifications-5.1.17-34 C:\Users\Anonymous\.gradle\caches\transforms-4\b961ac7633e04c55061c351f96f6d165\transformed\notifications-5.1.17\res
+com.itwingtech.myapplication.app-viewpager2-1.0.0-35 C:\Users\Anonymous\.gradle\caches\transforms-4\babb0f8abc74fd5ed302cff166935557\transformed\viewpager2-1.0.0\res
+com.itwingtech.myapplication.app-play-services-ads-23.3.0-36 C:\Users\Anonymous\.gradle\caches\transforms-4\c0c2b38b845871ea7d9b43402363c765\transformed\play-services-ads-23.3.0\res
+com.itwingtech.myapplication.app-drawerlayout-1.1.1-37 C:\Users\Anonymous\.gradle\caches\transforms-4\c501ed2c0539f61dfce9f8c96db359de\transformed\drawerlayout-1.1.1\res
+com.itwingtech.myapplication.app-appcompat-resources-1.7.0-38 C:\Users\Anonymous\.gradle\caches\transforms-4\c76e2d518b8f5e6d907b3931c50de6f5\transformed\appcompat-resources-1.7.0\res
+com.itwingtech.myapplication.app-annotation-experimental-1.4.0-39 C:\Users\Anonymous\.gradle\caches\transforms-4\ca0d66d2d4d29a4752aa1f4d41c4e605\transformed\annotation-experimental-1.4.0\res
+com.itwingtech.myapplication.app-browser-1.4.0-40 C:\Users\Anonymous\.gradle\caches\transforms-4\cb45af284eb3d2860f3e842bf1f87ce7\transformed\browser-1.4.0\res
+com.itwingtech.myapplication.app-location-5.1.17-41 C:\Users\Anonymous\.gradle\caches\transforms-4\ccf4a05f9f6c8c6c93cb1a511ed9a092\transformed\location-5.1.17\res
+com.itwingtech.myapplication.app-in-app-messages-5.1.17-42 C:\Users\Anonymous\.gradle\caches\transforms-4\d37b2018e1d59deeeb3f0e4288e7023b\transformed\in-app-messages-5.1.17\res
+com.itwingtech.myapplication.app-sqlite-framework-2.3.0-43 C:\Users\Anonymous\.gradle\caches\transforms-4\dc9560cd7a1ea48a6a0eb96e4e3ef809\transformed\sqlite-framework-2.3.0\res
+com.itwingtech.myapplication.app-webkit-1.11.0-alpha02-44 C:\Users\Anonymous\.gradle\caches\transforms-4\dd4073478e780b5df4c7ac5928f2abb8\transformed\webkit-1.11.0-alpha02\res
+com.itwingtech.myapplication.app-emoji2-views-helper-1.3.0-45 C:\Users\Anonymous\.gradle\caches\transforms-4\e70c5358baec6bb821a01244ef6b6a3e\transformed\emoji2-views-helper-1.3.0\res
+com.itwingtech.myapplication.app-sdp-android-1.1.1-46 C:\Users\Anonymous\.gradle\caches\transforms-4\e7e3969da55f7520da1cc66437cd7203\transformed\sdp-android-1.1.1\res
+com.itwingtech.myapplication.app-room-runtime-2.5.0-47 C:\Users\Anonymous\.gradle\caches\transforms-4\ea5fd5d9e7345f11fb27d0e9572a7a45\transformed\room-runtime-2.5.0\res
+com.itwingtech.myapplication.app-appcompat-1.7.0-48 C:\Users\Anonymous\.gradle\caches\transforms-4\ebf95e7bf6e3735b6cd05a8dd2bd8b89\transformed\appcompat-1.7.0\res
+com.itwingtech.myapplication.app-play-services-base-18.1.0-49 C:\Users\Anonymous\.gradle\caches\transforms-4\f05901d0eb240f5b1369041eba03437e\transformed\play-services-base-18.1.0\res
+com.itwingtech.myapplication.app-core-ktx-1.13.0-50 C:\Users\Anonymous\.gradle\caches\transforms-4\f267acd0ef3b63ab9be2a1e109d85a51\transformed\core-ktx-1.13.0\res
+com.itwingtech.myapplication.app-startup-runtime-1.1.1-51 C:\Users\Anonymous\.gradle\caches\transforms-4\f650ff1014a45da9d4f8d0398bbac268\transformed\startup-runtime-1.1.1\res
+com.itwingtech.myapplication.app-pngs-52 D:\Important Data\Android Client Projects\Libraries\Test\app\build\generated\res\pngs\debug
+com.itwingtech.myapplication.app-resValues-53 D:\Important Data\Android Client Projects\Libraries\Test\app\build\generated\res\resValues\debug
+com.itwingtech.myapplication.app-packageDebugResources-54 D:\Important Data\Android Client Projects\Libraries\Test\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.itwingtech.myapplication.app-packageDebugResources-55 D:\Important Data\Android Client Projects\Libraries\Test\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.itwingtech.myapplication.app-debug-56 D:\Important Data\Android Client Projects\Libraries\Test\app\build\intermediates\merged_res\debug\mergeDebugResources
+com.itwingtech.myapplication.app-debug-57 D:\Important Data\Android Client Projects\Libraries\Test\app\src\debug\res
+com.itwingtech.myapplication.app-main-58 D:\Important Data\Android Client Projects\Libraries\Test\app\src\main\res
+com.itwingtech.myapplication.app-debug-59 D:\Important Data\Android Client Projects\Libraries\Test\myawesomeads\build\intermediates\packaged_res\debug\packageDebugResources
