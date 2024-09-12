@@ -31,7 +31,6 @@ import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.LoadAdError;
-import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.VideoController;
 import com.google.android.gms.ads.interstitial.InterstitialAd;
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
@@ -68,15 +67,6 @@ public class Admob_Ads {
     private static Dialog loadingDialog;
     private static RewardedAd rewardedAd;
 
-
-//    public void InitApp(Application application) {
-//
-//    }
-//
-//
-//    public static void InitAdmob(Activity activity) {
-//
-//    }
 
     public static boolean isNetworkAvailable(Activity context) {
         ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);

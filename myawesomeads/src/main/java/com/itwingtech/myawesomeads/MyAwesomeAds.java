@@ -14,8 +14,8 @@ import com.onesignal.OneSignal;
 public class MyAwesomeAds {
     public static String appName = "PrefName";
 
-    public void initApp(Application application) {
-        loadOpenApp(application);
+    public static void initApp(Application application) {
+        new AppOpenManager(application);
     }
 
     public static void init(Activity activity) {
@@ -77,10 +77,6 @@ public class MyAwesomeAds {
 
     public static void loadRewarded(Activity activity, onAdShowed onAdShowed) {
         Admob_Ads.showRewardedDialog(activity, onAdShowed);
-    }
-
-    public void loadOpenApp(Application application) {
-        new AppOpenManager(application);
     }
 
     public static void loadSplash(Activity activity, long DelayTime, onAdShowed onAdShowed) {
