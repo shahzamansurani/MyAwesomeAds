@@ -15,21 +15,20 @@ public class MyAwesomeAds {
     public static String appName = "PrefName";
 
     public void initApp(Application application) {
-        FirebaseApp.initializeApp(application);
-//        FirebaseCrashlytics.getInstance();
-//        FirebaseAnalytics.getInstance(application);
-        new Thread(() -> MobileAds.initialize(application, initializationStatus -> {
-        })).start();
-        OneSignal.initWithContext(application, SharedPref.getOneSingleKey(application));
-        OneSignal.getNotifications().requestPermission(true, Continue.with(r -> {
-        }));
         loadOpenApp(application);
-        Toast.makeText(application, "Everything is Okay...", Toast.LENGTH_SHORT).show();
     }
 
     public static void init(Activity activity) {
         appName = activity.getPackageName();
         OpenAppAd.LoadOpenApp(activity);
+        FirebaseApp.initializeApp(activity);
+        new Thread(() -> MobileAds.initialize(activity, initializationStatus -> {
+        })).start();
+        OneSignal.initWithContext(activity, SharedPref.getOneSingleKey(activity));
+        OneSignal.getNotifications().requestPermission(true, Continue.with(r -> {
+        }));
+
+        Toast.makeText(activity, "Everything is Okay...", Toast.LENGTH_SHORT).show();
     }
 
     public static void dialogAnimation(Activity activity, int animationRaw) {
@@ -80,7 +79,7 @@ public class MyAwesomeAds {
         Admob_Ads.showRewardedDialog(activity, onAdShowed);
     }
 
-    public static void loadOpenApp(Application application) {
+    public void loadOpenApp(Application application) {
         new AppOpenManager(application);
     }
 
