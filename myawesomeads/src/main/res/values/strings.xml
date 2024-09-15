@@ -6,4 +6,7 @@
     <string name="native_small_text">Native Ad Area...</string>
     <string name="native_large_text">Large Native Ad Area...</string>
     <string name="collapsable_banner_text">Collapsable Banner Ad Area...</string>
+    <string name="watch_ad">Watch Ad</string>
+    <string name="skip">Skip</string>
+    <string name="watch_video_ad_to_proceed">Watch Video Ad to Proceed..</string>
 </resources>

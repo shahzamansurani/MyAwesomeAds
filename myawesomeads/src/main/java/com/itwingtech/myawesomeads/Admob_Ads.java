@@ -3,6 +3,7 @@ package com.itwingtech.myawesomeads;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.ConnectivityManager;
@@ -476,7 +477,7 @@ public class Admob_Ads {
 
                 SharedPref.setCheckStart(activity, Objects.requireNonNull(snapshot.child("checkStart").getValue()).toString());
 
-                SharedPref.setIsNative(activity, (Boolean) (snapshot.child("isAppOpenOn").getValue()));
+                SharedPref.setIsAppOpen(activity, (Boolean) (snapshot.child("isAppOpenOn").getValue()));
                 SharedPref.setIsBanner(activity, (Boolean) (snapshot.child("isBannerOn").getValue()));
                 SharedPref.setIsInterstitial(activity, (Boolean) (snapshot.child("isInterstitialOn").getValue()));
                 SharedPref.setIsNative(activity, (Boolean) (snapshot.child("isNativeOn").getValue()));

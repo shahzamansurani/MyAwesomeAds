@@ -3,6 +3,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="colorPrimary">#114bab</color>
-    <color name="colorAccent">#383636</color>
+<!--    <color name="colorPrimary">#114bab</color>-->
+<!--    <color name="colorAccent">#383636</color>-->
+
+    <color name="okButtonColor">#0091EA</color>
+    <color name="okTextColor">#FFFFFF</color>
+    <color name="skipButtonColor">#6200EA</color>
+    <color name="skipTextColor">#FAFAFA</color>
+    <color name="adsButtonColor">#6200EA</color>
 </resources>

@@ -1,8 +1,11 @@
 R_DEF: Internal format may change without notice
 local
+color adsButtonColor
 color black
-color colorAccent
-color colorPrimary
+color okButtonColor
+color okTextColor
+color skipButtonColor
+color skipTextColor
 color white
 drawable ic_launcher_background
 drawable ic_launcher_foreground

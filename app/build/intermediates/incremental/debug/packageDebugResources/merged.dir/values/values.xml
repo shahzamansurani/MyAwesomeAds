@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="adsButtonColor">#6200EA</color>
     <color name="black">#FF000000</color>
-    <color name="colorAccent">#383636</color>
-    <color name="colorPrimary">#114bab</color>
+    <color name="okButtonColor">#0091EA</color>
+    <color name="okTextColor">#FFFFFF</color>
+    <color name="skipButtonColor">#6200EA</color>
+    <color name="skipTextColor">#FAFAFA</color>
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">My Application</string>
     <style name="Base.Theme.MyApplication" parent="Theme.Material3.DayNight.NoActionBar">

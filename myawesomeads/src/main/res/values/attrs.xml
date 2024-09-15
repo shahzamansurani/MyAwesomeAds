@@ -1,42 +1,50 @@
 <resources>
     <declare-styleable name="MyAdaptiveBannerView">
-        <attr format="string" name="adaptiveBannerText" />
-        <attr format="color" name="adaptiveBannerTextColor" />
-        <attr format="dimension" name="adaptiveBannerTextSize" />
-        <attr format="color" name="adaptiveBannerStrokeColor" />
-        <attr format="color" name="adaptiveBannerBackgroundColor" />
-        <attr format="dimension" name="adaptiveBannerStrokeWidth" />
-        <attr format="dimension" name="adaptiveBannerCornerRadius" />
+        <attr name="adaptiveBannerText" format="string" />
+        <attr name="adaptiveBannerTextColor" format="color" />
+        <attr name="adaptiveBannerTextSize" format="dimension" />
+        <attr name="adaptiveBannerStrokeColor" format="color" />
+        <attr name="adaptiveBannerBackgroundColor" format="color" />
+        <attr name="adaptiveBannerStrokeWidth" format="dimension" />
+        <attr name="adaptiveBannerCornerRadius" format="dimension" />
     </declare-styleable>
 
     <declare-styleable name="MyCollapsableBannerView">
-        <attr format="string" name="collapsableBannerText" />
-        <attr format="color" name="collapsableBannerTextColor" />
-        <attr format="dimension" name="collapsableBannerTextSize" />
-        <attr format="color" name="collapsableBannerStrokeColor" />
-        <attr format="color" name="collapsableBannerBackgroundColor" />
-        <attr format="dimension" name="collapsableBannerStrokeWidth" />
-        <attr format="string" name="collapsableBannerType" />
-        <attr format="dimension" name="collapsableBannerCornerRadius" />
+        <attr name="collapsableBannerText" format="string" />
+        <attr name="collapsableBannerTextColor" format="color" />
+        <attr name="collapsableBannerTextSize" format="dimension" />
+        <attr name="collapsableBannerStrokeColor" format="color" />
+        <attr name="collapsableBannerBackgroundColor" format="color" />
+        <attr name="collapsableBannerStrokeWidth" format="dimension" />
+        <attr name="collapsableBannerType" format="string" />
+        <attr name="collapsableBannerCornerRadius" format="dimension" />
     </declare-styleable>
 
     <declare-styleable name="MyNativeLarge">
-        <attr format="string" name="nativeLargeText" />
-        <attr format="color" name="nativeLargeTextColor" />
-        <attr format="dimension" name="nativeLargeTextSize" />
-        <attr format="color" name="nativeLargeStrokeColor" />
-        <attr format="color" name="nativeLargeBackgroundColor" />
-        <attr format="dimension" name="nativeLargeStrokeWidth" />
-        <attr format="dimension" name="nativeLargeCornerRadius" />
+        <attr name="nativeLargeText" format="string" />
+        <attr name="nativeLargeTextColor" format="color" />
+        <attr name="nativeLargeTextSize" format="dimension" />
+        <attr name="nativeLargeStrokeColor" format="color" />
+        <attr name="nativeLargeBackgroundColor" format="color" />
+        <attr name="nativeLargeStrokeWidth" format="dimension" />
+        <attr name="nativeLargeCornerRadius" format="dimension" />
     </declare-styleable>
 
     <declare-styleable name="MyNativeSmall">
-        <attr format="string" name="nativeSmallText" />
-        <attr format="color" name="nativeSmallTextColor" />
-        <attr format="dimension" name="nativeSmallTextSize" />
-        <attr format="color" name="nativeSmallStrokeColor" />
-        <attr format="color" name="nativeSmallBackgroundColor" />
-        <attr format="dimension" name="nativeSmallStrokeWidth" />
-        <attr format="dimension" name="nativeSmallCornerRadius" />
+        <attr name="nativeSmallText" format="string" />
+        <attr name="nativeSmallTextColor" format="color" />
+        <attr name="nativeSmallTextSize" format="dimension" />
+        <attr name="nativeSmallStrokeColor" format="color" />
+        <attr name="nativeSmallBackgroundColor" format="color" />
+        <attr name="nativeSmallStrokeWidth" format="dimension" />
+        <attr name="nativeSmallCornerRadius" format="dimension" />
     </declare-styleable>
+
+
+    <attr name="okButtonColor" format="color" />
+    <attr name="okTextColor" format="color" />
+    <attr name="skipButtonColor" format="color" />
+    <attr name="skipTextColor" format="color" />
+    <attr name="dialogTitleColor" format="color" />
+    <attr name="adsButtonColor" format="color" />
 </resources>

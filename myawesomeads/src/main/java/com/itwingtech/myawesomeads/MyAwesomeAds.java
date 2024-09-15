@@ -5,10 +5,13 @@ import android.app.Application;
 import android.content.Context;
 import android.os.CountDownTimer;
 import android.util.Log;
+import android.widget.Toast;
+
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.IntentSenderRequest;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.ads.MobileAds;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.analytics.FirebaseAnalytics;
@@ -18,33 +21,18 @@ import com.onesignal.OneSignal;
 public class MyAwesomeAds {
     public static String appName = "PrefName";
     private static MyAwesomeAds instance;
-
-    // Default values
-    private Boolean isAds = false;
-    private Boolean isBanner = true;
-    private Boolean isNative = true;
-    private Boolean isInterstitial = true;
-    private Boolean isAppOpen = true;
-    private Boolean isRewarded = true;
-    private String checkStart = "open";
-    private String bannerKey = "ca-app-pub-3940256099942544/9214589741";
-    private String interstitialKey = "ca-app-pub-3940256099942544/1033173712";
-    private String nativeKey = "ca-app-pub-3940256099942544/1044960115";
-    private String appOpenKey = "ca-app-pub-3940256099942544/9257395921";
-    private String rewardedKey = "/6499/example/rewarded";
-    private String oneSingleKey = "0ff9bd-1a9-467-81e1-e293";
-    private int adInterval = 3;
-    private int animationRaw = R.raw.loading;
+    private final Context context;
 
 
-    // Private constructor to prevent instantiation
-    private MyAwesomeAds() {
+    // Private constructor to enforce singleton pattern
+    private MyAwesomeAds(AppCompatActivity activity) {
+        this.context = activity.getApplicationContext();
     }
 
-    // Method to get the singleton instance
-    public static MyAwesomeAds getInstance() {
+    public static MyAwesomeAds getInstance(AppCompatActivity activity) {
         if (instance == null) {
-            instance = new MyAwesomeAds();
+            instance = new MyAwesomeAds(activity);
+            init(activity);
         }
         return instance;
     }
@@ -82,25 +70,31 @@ public class MyAwesomeAds {
         InAppUpdateManager.init(activity, activityResultLauncher);
     }
 
-
-    public static void loadInitDatabase(Activity activity) {
+    public MyAwesomeAds setDatabase(Activity activity) {
         Admob_Ads.LoadFirebaseAdsData(activity, getApplicationName(activity));
+        return this; // Return the current instance for chaining
     }
 
-    public static void loadInitDatabase(Activity activity, String databaseName) {
+
+    public MyAwesomeAds setDatabase(Activity activity, String databaseName) {
         Admob_Ads.LoadFirebaseAdsData(activity, databaseName);
+        return this; // Return the current instance for chaining
     }
+
 
     public static String getApplicationName(Context context) {
         return context.getApplicationInfo().loadLabel(context.getPackageManager()).toString();
     }
 
-    public static void loadInterstitialLimit(Activity activity, onAdShowed onAdShowed) {
+
+    public MyAwesomeAds loadInterstitialLimit(Activity activity, onAdShowed onAdShowed) {
         Admob_Ads.CheckInitLimit(activity, onAdShowed);
+        return this; // Return the current instance for chaining
     }
 
-    public static void loadInterstitialWithoutLimit(Activity activity, onAdShowed onAdShowed) {
+    public MyAwesomeAds loadInterstitialWithoutLimit(Activity activity, onAdShowed onAdShowed) {
         Admob_Ads.CheckInitWithoutLimit(activity, onAdShowed);
+        return this; // Return the current instance for chaining
     }
 
     public static void loadCollapsableBanner(Activity activity, MyCollapsableBannerView myAdaptiveBannerView, String top_bottom) {
@@ -119,17 +113,22 @@ public class MyAwesomeAds {
         Admob_Ads.CheckNativeSmall(activity, myNativeSmall);
     }
 
-    public static void loadRewarded(Activity activity, onAdShowed onAdShowed) {
+
+    public MyAwesomeAds loadRewardedAd(Activity activity, onAdShowed onAdShowed) {
         Admob_Ads.showRewardedDialog(activity, onAdShowed);
+        return this; // Return the current instance for chaining
     }
 
-    public static void loadAppOpenAd(Activity activity, onAdShowed onAdShowed) {
+
+
+    public MyAwesomeAds loadAppOpenAd(Activity activity, onAdShowed onAdShowed) {
         if (SharedPref.getIsAds(activity) && SharedPref.getIsAppOpen(activity)) {
             OpenAppAd.showAdIfAvailable(activity, onAdShowed);
         }
+        return this; // Return the current instance for chaining
     }
 
-    public static void loadSplash(Activity activity, long DelayTime, onAdShowed onAdShowed) {
+    public MyAwesomeAds loadSplash(Activity activity, long DelayTime, onAdShowed onAdShowed) {
         new CountDownTimer(DelayTime, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
@@ -147,144 +146,79 @@ public class MyAwesomeAds {
                 }
             }
         }.start();
-
+        return this; // Return the current instance for chaining
     }
 
-
-    // Setters with return type of MyAwesomeAds for chaining
-    public MyAwesomeAds setAds(Boolean ads) {
-        isAds = ads;
-        return this;
+    // Setters for ad states
+    public MyAwesomeAds setAds(boolean isAdsOn) {
+        SharedPref.setIsAds(context, isAdsOn);
+        return this; // Return the current instance for chaining
     }
 
-    public MyAwesomeAds setBanner(Boolean banner) {
-        isBanner = banner;
-        return this;
+    public MyAwesomeAds setIsBanner(boolean isBanner) {
+        SharedPref.setIsBanner(context, isBanner);
+        return this; // Return the current instance for chaining
     }
 
-    public MyAwesomeAds setNative(Boolean aNative) {
-        isNative = aNative;
-        return this;
+    public MyAwesomeAds setIsInterstitial(boolean isInterstitial) {
+        SharedPref.setIsInterstitial(context, isInterstitial);
+        return this; // Return the current instance for chaining
     }
 
-    public MyAwesomeAds setInterstitial(Boolean interstitial) {
-        isInterstitial = interstitial;
-        return this;
+    public MyAwesomeAds setIsNative(boolean isNative) {
+        SharedPref.setIsNative(context, isNative);
+        return this; // Return the current instance for chaining
     }
 
-    public MyAwesomeAds setAppOpen(Boolean appOpen) {
-        isAppOpen = appOpen;
-        return this;
+    public MyAwesomeAds setIsRewarded(boolean isRewarded) {
+        SharedPref.setIsRewarded(context, isRewarded);
+        return this; // Return the current instance for chaining
     }
 
-    public MyAwesomeAds setRewarded(Boolean rewarded) {
-        isRewarded = rewarded;
-        return this;
+    public MyAwesomeAds setIsAppOpen(boolean isAppOpen) {
+        SharedPref.setIsAppOpen(context, isAppOpen);
+        return this; // Return the current instance for chaining
+    }
+
+    // Setters for AdMob keys
+    public MyAwesomeAds setAdmobBannerKey(String bannerId) {
+        SharedPref.setAdmobBannerKey(context, bannerId);
+        return this; // Return the current instance for chaining
+    }
+
+    public MyAwesomeAds setAdmobInterstitialKey(String interstitialId) {
+        SharedPref.setAdmobInterstitialKey(context, interstitialId);
+        return this; // Return the current instance for chaining
+    }
+
+    public MyAwesomeAds setAdmobNativeKey(String nativeId) {
+        SharedPref.setAdmobNativeKey(context, nativeId);
+        return this; // Return the current instance for chaining
+    }
+
+    public MyAwesomeAds setAdmobRewardedKey(String rewardedId) {
+        SharedPref.setAdmobRewardedKey(context, rewardedId);
+        return this; // Return the current instance for chaining
+    }
+
+    public MyAwesomeAds setAdmobAppOpenKey(String appOpenId) {
+        SharedPref.setAdmobAppOpenKey(context, appOpenId);
+        return this; // Return the current instance for chaining
+    }
+
+    // Setters for other configuration options
+    public MyAwesomeAds setAdInterval(int interval) {
+        SharedPref.setAdInterval(context, interval);
+        return this; // Return the current instance for chaining
     }
 
     public MyAwesomeAds setCheckStart(String checkStart) {
-        this.checkStart = checkStart;
-        return this;
+        SharedPref.setCheckStart(context, checkStart);
+        return this; // Return the current instance for chaining
     }
 
-    public MyAwesomeAds setBannerKey(String bannerKey) {
-        this.bannerKey = bannerKey;
-        return this;
-    }
-
-    public MyAwesomeAds setInterstitialKey(String interstitialKey) {
-        this.interstitialKey = interstitialKey;
-        return this;
-    }
-
-    public MyAwesomeAds setNativeKey(String nativeKey) {
-        this.nativeKey = nativeKey;
-        return this;
-    }
-
-    public MyAwesomeAds setAppOpenKey(String appOpenKey) {
-        this.appOpenKey = appOpenKey;
-        return this;
-    }
-
-    public MyAwesomeAds setRewardedKey(String rewardedKey) {
-        this.rewardedKey = rewardedKey;
-        return this;
-    }
-
-    public MyAwesomeAds setOneSingleKey(String oneSingleKey) {
-        this.oneSingleKey = oneSingleKey;
-        return this;
-    }
-
-    public MyAwesomeAds setAdInterval(int adInterval) {
-        this.adInterval = adInterval;
-        return this;
-    }
-
-    public MyAwesomeAds setAnimationRaw(int animationRaw) {
-        this.animationRaw = animationRaw;
-        return this;
-    }
-
-    // Getter methods (unchanged)
-    public Boolean getAds() {
-        return isAds;
-    }
-
-    public Boolean getBanner() {
-        return isBanner;
-    }
-
-    public Boolean getNative() {
-        return isNative;
-    }
-
-    public Boolean getInterstitial() {
-        return isInterstitial;
-    }
-
-    public Boolean getAppOpen() {
-        return isAppOpen;
-    }
-
-    public Boolean getRewarded() {
-        return isRewarded;
-    }
-
-    public String getCheckStart() {
-        return checkStart;
-    }
-
-    public String getBannerKey() {
-        return bannerKey;
-    }
-
-    public String getInterstitialKey() {
-        return interstitialKey;
-    }
-
-    public String getNativeKey() {
-        return nativeKey;
-    }
-
-    public String getAppOpenKey() {
-        return appOpenKey;
-    }
-
-    public String getRewardedKey() {
-        return rewardedKey;
-    }
-
-    public String getOneSingleKey() {
-        return oneSingleKey;
-    }
-
-    public int getAdInterval() {
-        return adInterval;
-    }
-
-    public int getAnimationRaw() {
-        return animationRaw;
+    public MyAwesomeAds setAnimation(int animation) {
+        SharedPref.setAnimation(context, animation);
+        return this; // Return the current instance for chaining
     }
 }
