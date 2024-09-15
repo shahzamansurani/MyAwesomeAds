@@ -1,7 +1,6 @@
 package com.itwingtech.myapplication;
 
 import android.app.Application;
-
 import com.itwingtech.myawesomeads.MyAwesomeAds;
 
 public class ApplicationClass extends Application {

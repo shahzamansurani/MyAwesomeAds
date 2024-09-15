@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.itwingtech.myapplication.app-mergeDebugResources-54:/values-mr/values-mr.xml",
+            "outputFile": "com.itwingtech.myapplication.app-mergeDebugResources-56:/values-mr/values-mr.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Anonymous\\.gradle\\caches\\transforms-4\\0e28803a920ee3d76f7d72583b7b6f87\\transformed\\material-1.12.0\\res\\values-mr\\values-mr.xml",

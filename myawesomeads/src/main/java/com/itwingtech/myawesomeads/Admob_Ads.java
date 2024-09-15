@@ -1,7 +1,6 @@
 package com.itwingtech.myawesomeads;
 
 import android.app.Activity;
-import android.app.Application;
 import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Color;
@@ -10,6 +9,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,7 +18,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
@@ -38,7 +37,6 @@ import com.google.android.gms.ads.nativead.NativeAd;
 import com.google.android.gms.ads.nativead.NativeAdView;
 import com.google.android.gms.ads.rewarded.RewardedAd;
 import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
-import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -46,17 +44,11 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.itwingtech.myawesomeads.databinding.DialogLoadingBinding;
 import com.itwingtech.myawesomeads.databinding.WatchadDialogBinding;
-import com.onesignal.Continue;
-import com.onesignal.OneSignal;
 
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
 
-
-/**
- * @noinspection ALL
- */
 
 public class Admob_Ads {
     private static InterstitialAd interstitialAd;
@@ -68,7 +60,7 @@ public class Admob_Ads {
     private static RewardedAd rewardedAd;
 
 
-    public static boolean isNetworkAvailable(Activity context) {
+    public static boolean isNetworkAvailable(Context context) {
         ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         if (connectivityManager != null) {
             NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
@@ -284,7 +276,7 @@ public class Admob_Ads {
             });
 
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.e("MyAppTag", "Error occurred: ", e);
         }
     }
 
@@ -318,14 +310,14 @@ public class Admob_Ads {
                 }
             });
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.e("MyAppTag", "Error occurred: ", e);
         }
     }
 
     public static void LoadNativeAdLarge(Activity mActivity, MyNativeLarge frameLayout) {
         showDialog(mActivity);
         AdLoader adLoader = new AdLoader.Builder(mActivity, SharedPref.getAdmobNativeKey(mActivity)).forNativeAd(nativeAd -> {
-            NativeAdView adView = (NativeAdView) mActivity.getLayoutInflater().inflate(R.layout.native_admob_large, null);
+            NativeAdView adView = (NativeAdView) mActivity.getLayoutInflater().inflate(R.layout.native_admob_large, frameLayout, false);
             if (mNativeAd != null) {
                 mNativeAd.destroy();
             }
@@ -353,7 +345,7 @@ public class Admob_Ads {
     public static void LoadNativeAdSmall(Activity mActivity, MyNativeSmall frameLayout) {
         showDialog(mActivity);
         AdLoader adLoader = new AdLoader.Builder(mActivity, SharedPref.getAdmobNativeKey(mActivity)).forNativeAd(nativeAd -> {
-            NativeAdView adView = (NativeAdView) mActivity.getLayoutInflater().inflate(R.layout.native_admob_small, null);
+            NativeAdView adView = (NativeAdView) mActivity.getLayoutInflater().inflate(R.layout.native_admob_small, frameLayout, false);
             if (mNativeAd != null) {
                 mNativeAd.destroy();
             }
@@ -504,6 +496,9 @@ public class Admob_Ads {
 
 
     public static void showDialog(Activity activity) {
+        if (loadingDialog != null && loadingDialog.isShowing()) {
+            loadingDialog.dismiss();
+        }
         loadingDialog = new Dialog(activity);
         DialogLoadingBinding binding = DialogLoadingBinding.inflate(LayoutInflater.from(activity));
         binding.lottieAnimationView.setAnimation(SharedPref.getAnimation(activity));
@@ -520,8 +515,11 @@ public class Admob_Ads {
     }
 
     public static void closeDialog() {
-        if (loadingDialog.isShowing()) {
+        if (loadingDialog != null && loadingDialog.isShowing()) {
+            Log.d("Dialog", "Closing dialog");
             loadingDialog.dismiss();
+        } else {
+            Log.d("Dialog", "Dialog is not showing");
         }
     }
 
@@ -609,15 +607,14 @@ public class Admob_Ads {
                 ViewGroup.LayoutParams.WRAP_CONTENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT
         );
-        binding.btnWatch.setText("Try Again");
-        binding.btnSkip.setText("Go Back");
-        binding.dialogTitle.setText("Sorry Ad isn,t Ready Yet, Please Check your Internet Connection and Try Again. thanks");
+        binding.btnWatch.setText(R.string.try_again);
+        binding.btnSkip.setText(R.string.go_back);
+        binding.dialogTitle.setText(R.string.ad_not_ready);
         binding.btnWatch.setOnClickListener(v -> {
             ShowRewarded(activity, onAdShowed);
             watchAdDialog.dismiss();
         });
         binding.btnSkip.setOnClickListener(v -> {
-            activity.onBackPressed();
             adShowed = false;
             watchAdDialog.dismiss();
         });

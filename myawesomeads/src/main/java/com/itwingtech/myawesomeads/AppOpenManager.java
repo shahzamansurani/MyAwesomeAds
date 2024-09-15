@@ -3,13 +3,11 @@ package com.itwingtech.myawesomeads;
 import android.app.Activity;
 import android.app.Application;
 import android.os.Bundle;
-import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.lifecycle.Lifecycle;
-import androidx.lifecycle.LifecycleObserver;
-import androidx.lifecycle.OnLifecycleEvent;
+import androidx.lifecycle.DefaultLifecycleObserver;
+import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.ProcessLifecycleOwner;
 
 import com.google.android.gms.ads.AdError;
@@ -18,8 +16,7 @@ import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.appopen.AppOpenAd;
 
-public class AppOpenManager implements LifecycleObserver, Application.ActivityLifecycleCallbacks {
-    private static final String LOG_TAG = "AppOpenManager";
+public class AppOpenManager implements DefaultLifecycleObserver, Application.ActivityLifecycleCallbacks {
     private AppOpenAd appOpenAd = null;
     private static boolean isShowingAds = false;
     private final Application myApplication;
@@ -33,15 +30,18 @@ public class AppOpenManager implements LifecycleObserver, Application.ActivityLi
         fetchAd();
     }
 
-
-    @OnLifecycleEvent(Lifecycle.Event.ON_START)
-    public void onStart() {
-        showAdIfAvailable();
+    @Override
+    public void onStart(@NonNull LifecycleOwner owner) {
+        if (SharedPref.getIsAppOpen(myApplication) && SharedPref.getIsAds(myApplication) && Admob_Ads.isNetworkAvailable(myApplication)) {
+            showAdIfAvailable();
+        }
     }
 
-    /**
-     * Request an ad
-     */
+//    @OnLifecycleEvent(Lifecycle.Event.ON_START)
+//    public void onStart() {
+//        showAdIfAvailable();
+//    }
+
     public void fetchAd() {
         if (isAdAvailable()) {
             return;
@@ -56,13 +56,13 @@ public class AppOpenManager implements LifecycleObserver, Application.ActivityLi
             @Override
             public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
                 super.onAdFailedToLoad(loadAdError);
-                Log.d("POENAD", "onAdFailedToLoad: " + loadAdError.getMessage());
+//                Log.d("POENAD", "onAdFailedToLoad: " + loadAdError.getMessage());
             }
         };
         AdRequest adRequest = getAdRequest();
-        AppOpenAd.load(myApplication,
-                SharedPref.getAdmobAppOpenKey(myApplication), adRequest,
-                AppOpenAd.APP_OPEN_AD_ORIENTATION_PORTRAIT, loadCallback);
+        AppOpenAd.load(
+                myApplication,
+                SharedPref.getAdmobAppOpenKey(myApplication), adRequest, loadCallback);
 
     }
 
@@ -97,7 +97,6 @@ public class AppOpenManager implements LifecycleObserver, Application.ActivityLi
 
             appOpenAd.setFullScreenContentCallback(fullScreenContentCallback);
             appOpenAd.show(currentActivity);
-
         } else
             fetchAd();
     }

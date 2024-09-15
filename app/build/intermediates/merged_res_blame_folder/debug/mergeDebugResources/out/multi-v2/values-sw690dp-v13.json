@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.itwingtech.myapplication.app-mergeDebugResources-54:/values-sw690dp-v13/values-sw690dp-v13.xml",
+            "outputFile": "com.itwingtech.myapplication.app-mergeDebugResources-56:/values-sw690dp-v13/values-sw690dp-v13.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Anonymous\\.gradle\\caches\\transforms-4\\e7e3969da55f7520da1cc66437cd7203\\transformed\\sdp-android-1.1.1\\res\\values-sw690dp-v13\\values-sw690dp-v13.xml",

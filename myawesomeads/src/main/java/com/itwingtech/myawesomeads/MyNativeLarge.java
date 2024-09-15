@@ -46,7 +46,7 @@ public class MyNativeLarge extends MaterialCardView {
                 ViewGroup.LayoutParams.MATCH_PARENT));
 
         TextView textView = new TextView(context);
-        textView.setText("Native Ad Area...");
+        textView.setText(R.string.native_large_text);
         textView.setGravity(CENTER);
         layout.addView(textView);
 
@@ -103,7 +103,8 @@ public class MyNativeLarge extends MaterialCardView {
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        int fixedHeightPx = (int) getResources().getDimension(com.intuit.sdp.R.dimen._240sdp);
+//        int fixedHeightPx = (int) getResources().getDimension(com.intuit.sdp.R.dimen._240sdp);
+        int fixedHeightPx = DimensionUtil.convertSdpToPx(context, 312);  // Convert 50sdp to px
         int customHeightMeasureSpec = MeasureSpec.makeMeasureSpec(fixedHeightPx, MeasureSpec.EXACTLY);
         super.onMeasure(widthMeasureSpec, customHeightMeasureSpec);
     }

@@ -47,7 +47,7 @@ afterEvaluate {
                 from(project.components["release"]) // Use this line to access components
                 groupId = "com.github.shahzamansurani"
                 artifactId = "myawesomeads"
-                version = android.defaultConfig.versionName // or manually "1.0"
+                version = android.defaultConfig.versionName
             }
         }
     }
@@ -67,4 +67,8 @@ dependencies {
     implementation("com.google.android.material:material:1.12.0")
     implementation("com.onesignal:OneSignal:5.1.17")
     implementation("androidx.lifecycle:lifecycle-process:2.8.5")
+    implementation("com.google.android.play:app-update:2.1.0")
+
+    implementation(platform("com.google.firebase:firebase-bom:33.2.0"))
+    implementation("com.google.firebase:firebase-analytics")
 }

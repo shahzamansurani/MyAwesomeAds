@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.itwingtech.myapplication.app-mergeDebugResources-54:/values-es/values-es.xml",
+            "outputFile": "com.itwingtech.myapplication.app-mergeDebugResources-56:/values-es/values-es.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Anonymous\\.gradle\\caches\\transforms-4\\c0c2b38b845871ea7d9b43402363c765\\transformed\\play-services-ads-23.3.0\\res\\values-es\\values.xml",

@@ -37,7 +37,7 @@ public class SharedPref {
 
     public static boolean getIsAds(Context context) {
         pref = context.getSharedPreferences(PREF_NAME, MODE_PRIVATE);
-        return pref.getBoolean(ISADS, defValues.getIsAds());
+        return pref.getBoolean(ISADS, MyAwesomeAds.getInstance().getAds());
     }
 
 
@@ -50,7 +50,7 @@ public class SharedPref {
 
     public static boolean getIsBanner(Context context) {
         pref = context.getSharedPreferences(PREF_NAME, MODE_PRIVATE);
-        return pref.getBoolean(ISBANNERON, defValues.getIsBanner());
+        return pref.getBoolean(ISBANNERON, MyAwesomeAds.getInstance().getBanner());
     }
 
     public static void setIsInterstitial(Context context, Boolean IsInterstitial) {
@@ -62,7 +62,7 @@ public class SharedPref {
 
     public static boolean getIsInterstitial(Context context) {
         pref = context.getSharedPreferences(PREF_NAME, MODE_PRIVATE);
-        return pref.getBoolean(ISINTERSTITALON, defValues.getIsInterstitial());
+        return pref.getBoolean(ISINTERSTITALON, MyAwesomeAds.getInstance().getInterstitial());
     }
 
     public static void setIsNative(Context context, Boolean IsNative) {
@@ -74,7 +74,7 @@ public class SharedPref {
 
     public static boolean getIsNative(Context context) {
         pref = context.getSharedPreferences(PREF_NAME, MODE_PRIVATE);
-        return pref.getBoolean(ISNATIVEON, defValues.getIsNative());
+        return pref.getBoolean(ISNATIVEON, MyAwesomeAds.getInstance().getNative());
     }
 
     public static void setIsRewarded(Context context, Boolean IsRewarded) {
@@ -86,7 +86,7 @@ public class SharedPref {
 
     public static boolean getIsRewarded(Context context) {
         pref = context.getSharedPreferences(PREF_NAME, MODE_PRIVATE);
-        return pref.getBoolean(ISREWARDEDON, defValues.getIsRewarded());
+        return pref.getBoolean(ISREWARDEDON, MyAwesomeAds.getInstance().getRewarded());
     }
 
     public static void setIsAppOpen(Context context, Boolean setIsAppOpen) {
@@ -98,13 +98,13 @@ public class SharedPref {
 
     public static boolean getIsAppOpen(Context context) {
         pref = context.getSharedPreferences(PREF_NAME, MODE_PRIVATE);
-        return pref.getBoolean(ISAPPOPENON, defValues.getIsAppOpen());
+        return pref.getBoolean(ISAPPOPENON, MyAwesomeAds.getInstance().getAppOpen());
     }
 
     //  <--------------------Settings------------------------>
     public static String getCheckStart(Context context) {
         pref = context.getSharedPreferences(PREF_NAME, MODE_PRIVATE);
-        return pref.getString(CHECKSTART, defValues.getCheckStart());
+        return pref.getString(CHECKSTART, MyAwesomeAds.getInstance().getCheckStart());
         //int
         //open
     }
@@ -125,7 +125,7 @@ public class SharedPref {
 
     public static int getAdInterval(Context context) {
         pref = context.getSharedPreferences(PREF_NAME, MODE_PRIVATE);
-        return pref.getInt(ADINTERVAL, defValues.getAdInterval());
+        return pref.getInt(ADINTERVAL, MyAwesomeAds.getInstance().getAdInterval());
     }
 
     public static void setOneSingleKey(Context context, String OneSingleKey) {
@@ -137,7 +137,7 @@ public class SharedPref {
 
     public static String getOneSingleKey(Context context) {
         pref = context.getSharedPreferences(PREF_NAME, MODE_PRIVATE);
-        return pref.getString(ONE_SINGLE, defValues.getOneSingleKey());
+        return pref.getString(ONE_SINGLE, MyAwesomeAds.getInstance().getOneSingleKey());
     }
 
 
@@ -151,7 +151,7 @@ public class SharedPref {
 
     public static String getAdmobBannerKey(Context context) {
         pref = context.getSharedPreferences(PREF_NAME, MODE_PRIVATE);
-        return pref.getString(ADMOB_BANNER, defValues.getBannerKey());
+        return pref.getString(ADMOB_BANNER, MyAwesomeAds.getInstance().getBannerKey());
         //ca-app-pub-3940256099942544/9214589741
     }
 
@@ -164,7 +164,7 @@ public class SharedPref {
 
     public static String getsetAdmobInterstitialKey(Context context) {
         pref = context.getSharedPreferences(PREF_NAME, MODE_PRIVATE);
-        return pref.getString(ADMOB_INTERSTITIAL, defValues.getInterstitialKey());
+        return pref.getString(ADMOB_INTERSTITIAL, MyAwesomeAds.getInstance().getInterstitialKey());
         //ca-app-pub-3940256099942544/1033173712
     }
 
@@ -177,7 +177,7 @@ public class SharedPref {
 
     public static String getAdmobNativeKey(Context context) {
         pref = context.getSharedPreferences(PREF_NAME, MODE_PRIVATE);
-        return pref.getString(ADMOB_NATIVE, defValues.getNativeKey());
+        return pref.getString(ADMOB_NATIVE, MyAwesomeAds.getInstance().getNativeKey());
         //ca-app-pub-3940256099942544/2247696110
         //ca-app-pub-3940256099942544/1044960115
     }
@@ -191,7 +191,7 @@ public class SharedPref {
 
     public static String getAdmobRewardedKey(Context context) {
         pref = context.getSharedPreferences(PREF_NAME, MODE_PRIVATE);
-        return pref.getString(ADMOB_REWARDED, defValues.getRewardedKey());
+        return pref.getString(ADMOB_REWARDED, MyAwesomeAds.getInstance().getRewardedKey());
         //ca-app-pub-3940256099942544/5354046379
     }
 
@@ -204,7 +204,7 @@ public class SharedPref {
 
     public static String getAdmobAppOpenKey(Context context) {
         pref = context.getSharedPreferences(PREF_NAME, MODE_PRIVATE);
-        return pref.getString(ADMOB_APPOPEN, defValues.getAppOpenKey());
+        return pref.getString(ADMOB_APPOPEN, MyAwesomeAds.getInstance().getAppOpenKey());
     }
 
 
@@ -217,6 +217,6 @@ public class SharedPref {
 
     public static int getAnimation(Context context) {
         pref = context.getSharedPreferences(PREF_NAME, MODE_PRIVATE);
-        return pref.getInt(DIALOGANIM, R.raw.loading);
+        return pref.getInt(DIALOGANIM, MyAwesomeAds.getInstance().getAnimationRaw());
     }
 }

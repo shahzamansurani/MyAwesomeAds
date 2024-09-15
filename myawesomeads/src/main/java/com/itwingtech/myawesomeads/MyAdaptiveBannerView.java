@@ -120,8 +120,8 @@ public class MyAdaptiveBannerView extends MaterialCardView {
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        int fixedHeightPx = (int) getResources().getDimension(com.intuit.sdp.R.dimen._50sdp);
-        int padding = (int) getResources().getDimension(com.intuit.sdp.R.dimen._3sdp);
+        int fixedHeightPx = DimensionUtil.convertSdpToPx(context, 60);  // Convert 50sdp to px
+        int padding = DimensionUtil.convertSdpToPx(context, 5);         // Convert 3sdp to px
         int customHeightMeasureSpec = MeasureSpec.makeMeasureSpec(fixedHeightPx + padding, MeasureSpec.EXACTLY);
         int customWidthMeasureSpec = MeasureSpec.makeMeasureSpec(MeasureSpec.getSize(widthMeasureSpec) + padding, MeasureSpec.EXACTLY);
         super.onMeasure(customWidthMeasureSpec, customHeightMeasureSpec);
