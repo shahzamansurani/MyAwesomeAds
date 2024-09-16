@@ -41,10 +41,4 @@
     </declare-styleable>
 
 
-    <attr name="okButtonColor" format="color" />
-    <attr name="okTextColor" format="color" />
-    <attr name="skipButtonColor" format="color" />
-    <attr name="skipTextColor" format="color" />
-    <attr name="dialogTitleColor" format="color" />
-    <attr name="adsButtonColor" format="color" />
 </resources>

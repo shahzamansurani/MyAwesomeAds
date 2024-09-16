@@ -3,9 +3,9 @@
     <string name="ad_not_ready">Sorry Ad isn,t Ready Yet, Please Check your Internet Connection and Try Again. thanks</string>
     <string name="go_back">Go Back</string>
     <string name="try_again">Try Again</string>
-    <string name="native_small_text">Native Ad Area...</string>
-    <string name="native_large_text">Large Native Ad Area...</string>
-    <string name="collapsable_banner_text">Collapsable Banner Ad Area...</string>
+    <string name="native_small_text">Native Ad Area..</string>
+    <string name="native_large_text">Large Native Ad Area..</string>
+    <string name="collapsable_banner_text">Collapsable Banner Ad Area..</string>
     <string name="watch_ad">Watch Ad</string>
     <string name="skip">Skip</string>
     <string name="watch_video_ad_to_proceed">Watch Video Ad to Proceed..</string>
