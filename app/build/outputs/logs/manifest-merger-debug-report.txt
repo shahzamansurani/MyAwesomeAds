@@ -249,12 +249,6 @@ category#android.intent.category.LAUNCHER
 ADDED from D:\Important Data\Android Client Projects\Libraries\Test\app\src\main\AndroidManifest.xml:22:17-77
 	android:name
 		ADDED from D:\Important Data\Android Client Projects\Libraries\Test\app\src\main\AndroidManifest.xml:22:27-74
-meta-data#com.google.android.gms.ads.APPLICATION_ID
-ADDED from D:\Important Data\Android Client Projects\Libraries\Test\app\src\main\AndroidManifest.xml:26:9-28:70
-	android:value
-		ADDED from D:\Important Data\Android Client Projects\Libraries\Test\app\src\main\AndroidManifest.xml:28:13-67
-	android:name
-		ADDED from D:\Important Data\Android Client Projects\Libraries\Test\app\src\main\AndroidManifest.xml:27:13-69
 uses-sdk
 INJECTED from D:\Important Data\Android Client Projects\Libraries\Test\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\Important Data\Android Client Projects\Libraries\Test\app\src\main\AndroidManifest.xml
